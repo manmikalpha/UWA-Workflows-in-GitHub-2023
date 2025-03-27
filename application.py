@@ -77,6 +77,9 @@ def calculate():
         number_2 = float(request.form["number_2"])
         result = number_1 - number_2
 
+    if operation == "log2":
+        result = math.log2(number_1)
+
     return render_template("index.html", result=result)
 
 
